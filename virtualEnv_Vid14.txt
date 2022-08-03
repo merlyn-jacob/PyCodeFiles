@@ -1,0 +1,35 @@
+1. pip installed virtual env
+python -m pip install virtualenv
+
+2. created a directory in desktop
+
+3. opened that directory in cmd (cd <directory address>)
+
+4. created virtual environment in that directory
+python -m virtualenv venv
+
+5. activated virtual environment
+venv\Scripts\activate
+
+6. created a kernel in jupyter notebook for venv
+ipython kernel install --user --name=venv
+
+7.reopen venv in cmd
+>open the directory
+>run venv\Scripts\activate
+
+8.get list of packages into a text file
+pip freeze --local > requirements.txt (--local will not take global site pckages)
+
+9.see whats in the text file
+cat requirements.txt
+
+10.get out of virtual env
+deactivate
+
+11. remove teh virtual env
+rm -rf <virtual env name>
+
+12. create a virtual env for a specific version of python
+virtualenv -p /usr/bin/python<version no.> <name of virtual env>
+virtualenv -p /usr/bin/python2.6 py26_venv (error here - check)

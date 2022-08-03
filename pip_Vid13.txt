@@ -1,0 +1,26 @@
+pip
+
+>check pip list
+in cmd, type pip list
+
+>help with pip
+pip help
+
+>check version of installed packages (if outdated or not)
+pip list -o
+
+>upgrade a package
+pip install -U <package name>
+
+>upgrade packages in bulk
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U
+
+>get the list of packages into a text file
+pip freeze > requirements.txt
+
+>see whats the content of above text file
+cat requirements.txt
+
+>install all the packages in above text file
+pip install -r requirements.txt (-r states that we are using a requirements file)
+
